@@ -23,7 +23,7 @@ export function UserManagement() {
   const [searchTerm, setSearchTerm] = useState("")
   const [roleFilter, setRoleFilter] = useState("All")
   const [statusFilter, setStatusFilter] = useState("All")
-  const [approvedUsers, setApprovedUsers] = useState(users.filter((user) => user.status === "Approved").length)
+  const [approvedUsers] = useState(users.filter((user) => user.status === "Approved").length)
 
 
 

@@ -32,13 +32,7 @@ const contestData = {
     "The winning design will be implemented in our upcoming fitness app. The designer will be credited in the app and may be considered for future projects.",
 }
 
-// Update the type of the `params` argument
-interface ContestPageProps {
-  params: { id: string }
-}
-
-export default function ContestPage({ params }: ContestPageProps) {
-  // You can now access `params.id` to fetch the contest data, if necessary
+export default function ContestPage() {
   const contest = contestData // Use mock data for now
 
   if (!contest) {

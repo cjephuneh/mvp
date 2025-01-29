@@ -2,6 +2,12 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contest Details",
+  description: "Contest Details Page",
+}
 
 // Mock data for a single contest (in a real app, this would come from a database or API)
 const contestData = {
@@ -26,10 +32,14 @@ const contestData = {
     "The winning design will be implemented in our upcoming fitness app. The designer will be credited in the app and may be considered for future projects.",
 }
 
-export default function ContestPage({ }: { params: { id: string } }) {
-  // In a real app, you would fetch the contest data based on the ID
-  // For this example, we'll use the mock data
-  const contest = contestData
+// Update the type of the `params` argument
+interface ContestPageProps {
+  params: { id: string }
+}
+
+export default function ContestPage({ params }: ContestPageProps) {
+  // You can now access `params.id` to fetch the contest data, if necessary
+  const contest = contestData // Use mock data for now
 
   if (!contest) {
     notFound()
@@ -97,4 +107,3 @@ export default function ContestPage({ }: { params: { id: string } }) {
     </div>
   )
 }
-

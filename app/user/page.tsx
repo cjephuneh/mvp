@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Overview } from "@/components/user/overview"
 import { RecentSubmissions } from "@/components/user/recent-submissions"
 

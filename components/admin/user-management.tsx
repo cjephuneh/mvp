@@ -25,10 +25,7 @@ export function UserManagement() {
   const [statusFilter, setStatusFilter] = useState("All")
   const [approvedUsers, setApprovedUsers] = useState(users.filter((user) => user.status === "Approved").length)
 
-  const handleApprove = (userId: number) => {
-    setApprovedUsers(approvedUsers + 1)
-    // In a real application, you would update the user's status in the backend here
-  }
+
 
   const filteredUsers = users.filter(
     (user) =>

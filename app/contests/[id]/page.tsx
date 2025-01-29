@@ -26,7 +26,7 @@ const contestData = {
     "The winning design will be implemented in our upcoming fitness app. The designer will be credited in the app and may be considered for future projects.",
 }
 
-export default function ContestPage({ params }: { params: { id: string } }) {
+export default function ContestPage({ }: { params: { id: string } }) {
   // In a real app, you would fetch the contest data based on the ID
   // For this example, we'll use the mock data
   const contest = contestData

@@ -1,5 +1,4 @@
 import { Card, CardContent, CardDescription, CardHeader, CardFooter, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ContestDetailsModal } from "@/components/client/contest-details-modal"
 

@@ -1,3 +1,6 @@
+/* eslint-disable-next-line react/no-unescaped-entities */
+
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 

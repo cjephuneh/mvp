@@ -1,13 +1,30 @@
 "use client"
 
+import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
+import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Switch } from "@/components/ui/switch"
 
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email.",
+  }),
+  password: z.string().min(8, {
+    message: "Password must be at least 8 characters.",
+  }),
+  twoFactor: z.boolean().default(false),
+  notifications: z.boolean().default(true),
+})
+
 export default function Settings() {
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -17,16 +34,16 @@ export default function Settings() {
     },
   })
 
-  function onSubmit(values: any) {
-    console.log(values)
-    // Here you would typically send this data to your backend
-  }
+//   function onSubmit(values: z.infer<typeof formSchema>) {
+//     console.log(values)
+//     // Here you would typically send this data to your backend
+//   }
 
   return (
     <div className="p-6 space-y-6">
       <h1 className="text-3xl font-bold">Settings</h1>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form  className="space-y-8">
           <FormField
             control={form.control}
             name="name"
@@ -104,3 +121,4 @@ export default function Settings() {
     </div>
   )
 }
+

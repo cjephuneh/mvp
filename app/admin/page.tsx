@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { AdminOverview } from "@/components/admin/admin-overview"
 import { RecentActivity } from "@/components/admin/recent-activity"
 

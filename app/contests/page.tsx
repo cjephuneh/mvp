@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Slider } from "@/components/ui/slider"
 import { Calendar } from "lucide-react"
-import { Navbar } from "@/components/landing/navbar"
-import { Footer } from "@/components/landing/footer"
+import  Navbar  from "@/components/landing/navbar"
+import  Footer  from "@/components/landing/footer"
 
 const contests = [
   {

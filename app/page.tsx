@@ -30,7 +30,7 @@ function App() {
               <div className="absolute -right-4 bottom-0 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-700" />
               
               <div className="inline-block">
-                <Sparkles className="w-8 h-8 text-yellow-400 animate-spin-slow absolute -top-8 -left-8" />
+                {/* <Sparkles className="w-8 h-8 text-yellow-400 animate-spin-slow absolute -top-8 -left-8" /> */}
                 <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mb-6 leading-tight tracking-tight mt-10">
                   Turn Your Startup Idea
                   <br />

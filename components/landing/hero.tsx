@@ -1,44 +1,47 @@
-/* eslint-disable react/no-unescaped-entities */
-
-
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 export function Hero() {
   return (
-    <div className="bg-gray-50">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 flex flex-col lg:flex-row items-center">
-        <div className="lg:w-1/2 lg:pr-8">
-          <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span className="block">Unleash Your Creativity</span>
-            <span className="block text-indigo-600">Win Amazing Contests</span>
-          </h1>
-          <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            Join our platform to showcase your skills, compete in exciting contests, and win great prizes. Whether
-            you're a designer, developer, or creative professional, there's a contest for you!
-          </p>
-          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div className="rounded-md shadow">
-              <Button asChild size="lg">
-                <Link href="/auth/register">Get Started</Link>
-              </Button>
+    <section className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-none shadow-xl">
+          <CardContent className="p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl mb-6">
+                  Turn Your Startup Idea Into Reality—In Just 72 Hours
+                </h1>
+                <p className="text-xl text-gray-600 mb-8">
+                  Founders list projects. Developers build them. No long-term contracts, no high costs—just real
+                  proof-of-concept results, fast.
+                </p>
+                <div className="space-x-4">
+                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+                    <Link href="/launch-hackathon">Launch Your Hackathon</Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg">
+                    <Link href="/find-project">Find a Project to Build</Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative">
+                <img
+                  src="/Designer.jpeg?height=400&width=600"
+                  alt="Startup Illustration"
+                  className="rounded-lg shadow-2xl"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                  <p className="text-2xl font-bold text-blue-600">72 Hours</p>
+                  <p className="text-gray-600">From Idea to MVP</p>
+                </div>
+              </div>
             </div>
-            <div className="mt-3 sm:mt-0 sm:ml-3">
-              <Button asChild variant="outline" size="lg">
-                <Link href="/contests">View Contests</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="lg:w-1/2 mt-10 lg:mt-0">
-          <img
-            className="w-full object-cover rounded-lg shadow-lg"
-            src="/Designer.jpeg?height=400&width=600"
-            alt="Contest illustration"
-          />
-        </div>
+          </CardContent>
+        </Card>
       </div>
-    </div>
+    </section>
   )
 }
 

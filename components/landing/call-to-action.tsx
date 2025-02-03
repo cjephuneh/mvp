@@ -1,28 +1,28 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import React from 'react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
-export function CallToAction() {
+export default function FinalCTA() {
   return (
-    <section className="bg-indigo-700">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          <span className="block">Ready to showcase your skills?</span>
-          <span className="block text-indigo-200">Join our platform today and start competing!</span>
-        </h2>
-        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <div className="inline-flex rounded-md shadow">
-            <Button asChild size="lg" className="bg-white text-indigo-600 hover:bg-indigo-50">
-              <Link href="/auth/register">Get Started</Link>
-            </Button>
-          </div>
-          <div className="ml-3 inline-flex rounded-md shadow">
-            <Button asChild variant="outline" size="lg" className="text-white border-white hover:bg-indigo-600">
-              <Link href="/how-it-works">Learn More</Link>
-            </Button>
-          </div>
+    <section className="py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center">
+          <Sparkles className="w-8 h-8 text-yellow-400 mx-auto mb-6" />
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+            Turn Your Idea Into Reality—Start Today
+          </h2>
+          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            Your startup's first version is just 72 hours away. Join a community of founders and developers building the future, one MVP at a time.
+          </p>
+          <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold text-lg transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(88,80,236,0.3)] flex items-center gap-2 mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+            <span className="relative flex items-center gap-2">
+              Launch Your Hackathon
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
